@@ -59,6 +59,7 @@ fn update(app: &App, model: &mut Model, update: Update) {
 
         if clicked {
             let win = app.window_rect();
+            println!("{:?}", win.right());
             model.universe.reset(win.right(), win.left());
         }
     });
@@ -118,10 +119,10 @@ impl Universe {
 
         //planets:
         for _ in 0..n {
-            let pos: Vec2 = Vec2::new(rgen.gen_range(-right..right), rgen.gen_range(-top..top));
+            let pos: Vec2 = Vec2::new(rgen.gen_range((-right)..right), rgen.gen_range((-top)..top));
             let vel: Vec2 = Vec2::new(
-                rgen.gen_range(-velocity..=velocity),
-                rgen.gen_range(-velocity..=velocity),
+                rgen.gen_range(-velocity..velocity),
+                rgen.gen_range(-velocity..velocity),
             );
             bodies.push(Body::new(pos, vel, radius));
         }
@@ -140,8 +141,8 @@ impl Universe {
             .map(|_| {
                 let pos: Vec2 = Vec2::new(rgen.gen_range(-right..right), rgen.gen_range(-top..top));
                 let vel: Vec2 = Vec2::new(
-                    rgen.gen_range(-self.velocity..=self.velocity),
-                    rgen.gen_range(-self.velocity..=self.velocity),
+                    rgen.gen_range((-self.velocity)..=self.velocity),
+                    rgen.gen_range((-self.velocity)..=self.velocity),
                 );
 
                 Body::new(pos, vel, self.radius)

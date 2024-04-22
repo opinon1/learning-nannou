@@ -1,0 +1,11 @@
+/Users/oscarpinon/Desktop/dev/learning-nannou/nannou_guide/target/debug/deps/libgif-0975ddafca635d8d.rmeta: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/traits.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/common.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/reader/mod.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/reader/decoder.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/encoder.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/../README.md
+
+/Users/oscarpinon/Desktop/dev/learning-nannou/nannou_guide/target/debug/deps/gif-0975ddafca635d8d.d: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/traits.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/common.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/reader/mod.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/reader/decoder.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/encoder.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/../README.md
+
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/lib.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/traits.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/common.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/reader/mod.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/reader/decoder.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/encoder.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gif-0.11.4/src/../README.md:
