@@ -1,0 +1,13 @@
+/Users/oscarpinon/Desktop/dev/learning-nannou/project1/target/debug/deps/libnotosans-2a7975376a3b0e15.rmeta: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Bold.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-BoldItalic.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Italic.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Regular.ttf
+
+/Users/oscarpinon/Desktop/dev/learning-nannou/project1/target/debug/deps/libnotosans-2a7975376a3b0e15.rlib: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Bold.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-BoldItalic.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Italic.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Regular.ttf
+
+/Users/oscarpinon/Desktop/dev/learning-nannou/project1/target/debug/deps/notosans-2a7975376a3b0e15.d: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Bold.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-BoldItalic.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Italic.ttf /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Regular.ttf
+
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/src/lib.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Bold.ttf:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-BoldItalic.ttf:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Italic.ttf:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0/fonts/NotoSans-Regular.ttf:
+
+# env-dep:CARGO_MANIFEST_DIR=/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/notosans-0.1.0

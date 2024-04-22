@@ -1,0 +1,11 @@
+/Users/oscarpinon/Desktop/dev/learning-nannou/project1/target/release/deps/libapprox-ffb1480f132b8a12.rmeta: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/abs_diff_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/relative_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/ulps_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/macros.rs
+
+/Users/oscarpinon/Desktop/dev/learning-nannou/project1/target/release/deps/libapprox-ffb1480f132b8a12.rlib: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/abs_diff_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/relative_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/ulps_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/macros.rs
+
+/Users/oscarpinon/Desktop/dev/learning-nannou/project1/target/release/deps/approx-ffb1480f132b8a12.d: /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/lib.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/abs_diff_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/relative_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/ulps_eq.rs /Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/macros.rs
+
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/lib.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/abs_diff_eq.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/relative_eq.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/ulps_eq.rs:
+/Users/oscarpinon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.3.2/src/macros.rs:
