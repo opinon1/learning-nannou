@@ -32,8 +32,9 @@ fn model(app: &App) -> Model {
 
 fn update(app: &App, model: &mut Model, update: Update) {
     let egui = &mut model.egui;
+    let win = app.window_rect();
 
-    model.universe.step();
+    model.universe.step(win.right(), win.top());
 
     egui.set_elapsed_time(update.since_start);
     let ctx = egui.begin_frame();
@@ -112,13 +113,20 @@ impl Universe {
         let mut rgen = thread_rng();
 
         let mut bodies = Vec::with_capacity(n);
-        let velocity = 1f32;
+        let velocity = 5f32;
         let dt = 0.05f32;
-        let gravity = 1.05;
+        let gravity = 5.05;
         let radius = 1f32;
 
+        //SUN
+        bodies.push(Body::new(
+            Vec2::new(0f32, 0.0f32),
+            Vec2::new(0f32, 0f32),
+            20f32,
+        ));
+
         //planets:
-        for _ in 0..n {
+        for _ in (0..n).skip(2) {
             let pos: Vec2 = Vec2::new(rgen.gen_range((-right)..right), rgen.gen_range((-top)..top));
             let vel: Vec2 = Vec2::new(
                 rgen.gen_range(-velocity..velocity),
@@ -150,12 +158,22 @@ impl Universe {
             .collect();
     }
 
-    fn step(&mut self) {
+    fn step(&mut self, right: f32, top: f32) {
         self.update_acc();
         for i in 0..self.bodies.len() {
-            let vel = self.bodies[i].vel + self.bodies[i].acc * self.gravity * self.dt;
+            let dt = self.dt / 10.0;
+            let mut vel = self.bodies[i].vel + self.bodies[i].acc * self.gravity * dt;
 
-            let pos = self.bodies[i].pos + vel * self.dt;
+            let mut pos = self.bodies[i].pos + vel * dt;
+
+            if pos.x.abs() > right {
+                vel.x *= -0.9;
+                pos.x *= 0.99;
+            }
+            if pos.y.abs() > top {
+                vel.y *= -0.9;
+                pos.y *= 0.99;
+            }
 
             self.bodies[i].pos = pos;
             self.bodies[i].vel = vel;
@@ -208,7 +226,7 @@ impl Universe {
             return; // They are moving apart already
         }
 
-        let restitution = 0.0; // Coefficient of restitution (0 - inelastic, 1 - perfectly elastic)
+        let restitution = 0.7; // Coefficient of restitution (0 - inelastic, 1 - perfectly elastic)
         let mut impulse_magnitude = -(1.0 + restitution) * vel_along_norm;
         impulse_magnitude /= 1.0 / body1.mass + 1.0 / body2.mass;
 
