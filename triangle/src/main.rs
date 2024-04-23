@@ -45,7 +45,7 @@ impl PolyFractal {
 
         let radius: f32 = 300.0;
 
-        for i in (0..=360).step_by(120) {
+        for i in (0..=360).step_by(72) {
             let radian = deg_to_rad(i as f32);
             let x = radian.sin() * radius;
             let y = radian.cos() * radius;
@@ -56,10 +56,11 @@ impl PolyFractal {
     fn step(&mut self) {
         let mut randg = thread_rng();
         let p1 = &self.points[self.points.len() - 1];
-        let rand_i: usize = randg.gen_range(0..3);
+        let rand_i: usize = randg.gen_range(0..5);
         let p2 = &self.points[rand_i];
 
-        self.points.push(vec2(p1.x + p2.x, p1.y + p2.y) / 2.0)
+        self.points
+            .push(vec2(p1.x + p2.x, p1.y + p2.y) * 0.333_333_333f32)
     }
     fn display(&self, draw: &Draw) {
         for p in self.points.iter() {

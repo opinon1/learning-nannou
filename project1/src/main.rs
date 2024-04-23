@@ -3,8 +3,11 @@ use std::f32::MIN;
 use nannou::prelude::*;
 use nannou_egui::*;
 
+use rand::rngs::ThreadRng;
 use rand::thread_rng;
 use rand::Rng;
+
+use std::cmp::Ord;
 
 struct Model {
     universe: Universe,
@@ -44,7 +47,7 @@ fn update(app: &App, model: &mut Model, update: Update) {
         ui.label("gravity");
         ui.add(egui::Slider::new(
             &mut model.universe.gravity,
-            0.0001..=2.0f32,
+            0.0001..=50.0f32,
         ));
 
         // Scale slider
@@ -52,16 +55,15 @@ fn update(app: &App, model: &mut Model, update: Update) {
         ui.add(egui::Slider::new(&mut model.universe.dt, 0.000001..=3.0));
 
         // Rotation slider
-        ui.label("Rotation:");
-        ui.add(egui::Slider::new(&mut model.universe.radius, 1f32..=200.0));
+        ui.label("size:");
+        ui.add(egui::Slider::new(&mut model.universe.radius, 0.2f32..=10.0));
 
         // Random color button
         let clicked = ui.button("reset").clicked();
 
         if clicked {
             let win = app.window_rect();
-            println!("{:?}", win.right());
-            model.universe.reset(win.right(), win.left());
+            model.universe.reset(win.right(), win.top());
         }
     });
 }
@@ -106,6 +108,7 @@ struct Universe {
     velocity: f32,
     gravity: f32,
     dt: f32,
+    rgen: ThreadRng,
 }
 
 impl Universe {
@@ -126,7 +129,7 @@ impl Universe {
         ));
 
         //planets:
-        for _ in (0..n).skip(2) {
+        for _ in (0..n).skip(1) {
             let pos: Vec2 = Vec2::new(rgen.gen_range((-right)..right), rgen.gen_range((-top)..top));
             let vel: Vec2 = Vec2::new(
                 rgen.gen_range(-velocity..velocity),
@@ -140,22 +143,32 @@ impl Universe {
             gravity,
             velocity,
             dt,
+            rgen,
         }
     }
     fn reset(&mut self, right: f32, top: f32) {
-        let mut rgen = thread_rng();
+        let n = self.bodies.len();
 
-        self.bodies = (0..self.bodies.len())
-            .map(|_| {
-                let pos: Vec2 = Vec2::new(rgen.gen_range(-right..right), rgen.gen_range(-top..top));
-                let vel: Vec2 = Vec2::new(
-                    rgen.gen_range((-self.velocity)..=self.velocity),
-                    rgen.gen_range((-self.velocity)..=self.velocity),
-                );
+        self.bodies.clear();
 
-                Body::new(pos, vel, self.radius)
-            })
-            .collect();
+        self.bodies.push(Body::new(
+            Vec2::new(0f32, 0.0f32),
+            Vec2::new(0f32, 0f32),
+            20f32,
+        ));
+
+        //planets:
+        for _ in (0..n).skip(1) {
+            let pos: Vec2 = Vec2::new(
+                self.rgen.gen_range(-right..right),
+                self.rgen.gen_range(-top..top),
+            );
+            let vel: Vec2 = Vec2::new(
+                self.rgen.gen_range(-self.velocity..self.velocity),
+                self.rgen.gen_range(-self.velocity..self.velocity),
+            );
+            self.bodies.push(Body::new(pos, vel, self.radius));
+        }
     }
 
     fn step(&mut self, right: f32, top: f32) {
@@ -177,12 +190,13 @@ impl Universe {
 
             self.bodies[i].pos = pos;
             self.bodies[i].vel = vel;
-
-            self.bodies[i].acc = Vec2::ZERO;
         }
     }
 
     fn update_acc(&mut self) {
+        for i in 0..self.bodies.len() {
+            self.bodies[i].acc = Vec2::ZERO;
+        }
         for i in 0..self.bodies.len() {
             let p1 = self.bodies[i].pos;
             let m1 = self.bodies[i].mass;
@@ -251,9 +265,14 @@ impl Universe {
 
     fn display(&self, draw: &Draw) {
         for body in self.bodies.iter() {
+            let r = (body.vel.x.powi(2) + body.vel.y.powi(2)).sqrt();
+            let r: u8 = u8::min((r) as u8, 255u8);
+            let b = (body.acc.x.powi(2) + body.acc.y.powi(2)).sqrt();
+            let b: u8 = u8::min((b * 40.0) as u8, 255u8);
             draw.ellipse()
                 .w_h(body.radius * 2f32, body.radius * 2f32)
-                .xy(body.pos);
+                .xy(body.pos)
+                .color(rgb(255, 255 - b, 255 - r));
         }
     }
 }
